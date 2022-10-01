@@ -20,6 +20,10 @@ contract FundMe {
         priceFeed = AggregatorV3Interface(priceFeedAddress);
     }
 
+    function getFunders() public view returns (address[] memory) {
+        return funders;
+    }
+
     // This function moves (sends) ETH so must be marked as payable.
     function fund() public payable {
         // check if the amount being funded is more than the minimum_usd amount
