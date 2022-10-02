@@ -27,6 +27,8 @@
         "solhint": "^3.3.7"
     },
     "scripts": {
-        "test": "hardhat test"
+        "test": "hardhat test",
+        "lint": "yarn solhint 'contracts/*.sol'",
+        "format": "yarn prettier --write"
     }
 }
